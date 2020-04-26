@@ -1,15 +1,14 @@
-package jogotabuleiro;
+package boardgame;
 
-public class Posicao {
+
+public class Board {
 
 	private int linha;
 	private int coluna;
 	
-	public Posicao() {
-		
-	}
-	
-	public Posicao(int linha, int coluna) {
+	private Piece[][] pieces;
+
+	public Board(int linha, int coluna) {
 		this.linha = linha;
 		this.coluna = coluna;
 	}
@@ -29,10 +28,11 @@ public class Posicao {
 	public void setColuna(int coluna) {
 		this.coluna = coluna;
 	}
-	
-	@Override
-	public String toString() {
-		return linha +", "+coluna;
+	public Piece piece (int linha, int coluna) {
+		return pieces[linha][coluna];
+	}
+	public Piece piece (Position position) {
+		return pieces[position.getRow()][position.getColum()];
 	}
 	
 }
