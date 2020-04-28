@@ -1,26 +1,16 @@
 package application;
 
-import boardgame.Board;
-import boardgame.Position;
-import chess.ChessMath;
+import chess.ChessMatch;
 
 public class Program {
 
 	public static void main(String[] args) {
-	
-		ChessMath chessMath= new ChessMath();
-		
+
+		ChessMatch chessMath = new ChessMatch();
+
 		// Função para imprimir as peças da partida (Classe UI e metodo printBoard)
 		UI.printBoard(chessMath.getPieces());
-		
-		//Board boar = new Board (8,8);
-		//System.out.println(boar.toString());
-		
-		//Position pos = new Position (3,5);
-		//System.out.println(pos);
-		
-		
-	
+
 	}
 
 }
