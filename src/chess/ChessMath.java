@@ -16,6 +16,7 @@ public class ChessMath {
 		initialSetup();
 	}
 	
+	// método para retornar um conjunto de peças de xadrez
 	public ChessPiece[][] getPieces() {
 	
 	ChessPiece[][] mat = new ChessPiece[board.getRows()][board.getColums()];
@@ -31,8 +32,8 @@ public class ChessMath {
 	}
 	// método para colocar as peças no tabuleiro no inicio do jogo
 	private void initialSetup() {
-		board.placePiece(new Rook (board, chess.Color.WHIT), new Position(2,1));
+		board.placePiece(new Rook (board, chess.Color.WHITE), new Position(2,1));
 		board.placePiece(new King (board, chess.Color.BLACK), new Position (0,4));
-		board.placePiece(new King (board, chess.Color.WHIT), new Position (7,4));
+		board.placePiece(new King (board, chess.Color.WHITE), new Position (7,4));
 	}
 }
